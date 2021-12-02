@@ -66,10 +66,10 @@ $(function () {
 				//I2P symbols
 				+'<div id="I2PSymbols">'
 				+'<p>I/P Converter Symbols</p>'
-				+'<div data-shape="LY_100" class="palette_node_element draw2d_droppable" title="I/P Converter LY 100"><img src="images/img/I2P_LY100.png"></div>'
-				+'<div data-shape="TY_100" class="palette_node_element draw2d_droppable" title="I/P Converter TY 100"><img src="images/img/I2P_TY100.png"></div>'
-				+'<div data-shape="PY_100" class="palette_node_element draw2d_droppable" title="I/P Converter PY 100"><img src="images/img/I2P_PY100.png"></div>'
-				+'<div data-shape="FY_100" class="palette_node_element draw2d_droppable" title="I/P Converter FY 100"><img src="images/img/I2P_FY100.png"></div>'
+				+'<div data-shape="LY_100" class="palette_node_element draw2d_droppable" title="I/P Converter LY 100"><img src="images/img/I2p_LY100.png"></div>'
+				+'<div data-shape="TY_100" class="palette_node_element draw2d_droppable" title="I/P Converter TY 100"><img src="images/img/I2p_TY100.png"></div>'
+				+'<div data-shape="PY_100" class="palette_node_element draw2d_droppable" title="I/P Converter PY 100"><img src="images/img/I2p_PY100.png"></div>'
+				+'<div data-shape="FY_100" class="palette_node_element draw2d_droppable" title="I/P Converter FY 100"><img src="images/img/I2p_FY100.png"></div>'
 				+'<div style="clear: left;"></div>'
 				+'</div>'
 				
@@ -102,6 +102,10 @@ $(function () {
 				+'</div>';
 		
 		$("#mainDiv").html(SymbolLibrary);
+		
+		
+		stop_timer();
+		set_timer();
 		
 		
 		 app  = new example.Application(appId, type);
@@ -154,7 +158,7 @@ $(function () {
 			// Save jsonarray to DB
              alertify.alert(jsonarray); 
 
-			console.log(jsonarray);
+//			console.log(jsonarray);
 			if(appId == 1){
 				
 				checkConnectionsForLC(appId,jsonarray);
@@ -181,7 +185,7 @@ $(function () {
 					
 					var figure = null;
 					
-					console.log("pageX: " + event.pageX + ", pageY: " + event.pageY);
+//					console.log("pageX: " + event.pageX + ", pageY: " + event.pageY);
 				
  					var draggedId = ui.draggable.prop("id");
 					
