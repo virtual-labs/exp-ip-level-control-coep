@@ -23,7 +23,7 @@ var width = $(window).width();
 	//y = 160;
 	
 	x = 40;
-	y = 10;
+	y = 50;
 
 	
 	
